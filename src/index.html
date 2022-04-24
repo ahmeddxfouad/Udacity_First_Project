@@ -1,0 +1,88 @@
+<style>
+    body {
+   color: black;
+
+background-color: #A0DAA9
+
+}
+
+    </style>
+<h1 id="first-project">First Project</h1>
+<h2 id="getting-started">Getting Started</h2>
+<h3 id="installing-dependencies">Installing Dependencies</h3>
+<p>project requires having node installed <a href="https://nodejs.org/en/download/">https://nodejs.org/en/download/</a></p>
+<p>run <code>npm install</code> to install the dependencies</p>
+<h2 id="getting-started">Getting Started</h2>
+<ul>
+<li>Base URL: The app is hosted locally at &#39;<a href="http://172.0.0.1:3000">http://172.0.0.1:3000</a>&#39;</li>
+<li>Authentication: No Authentication required.</li>
+</ul>
+<h2 id="returned-error-codes">Returned Error Codes</h2>
+<ul>
+<li>400: Bad Request</li>
+<li>404: Not Found</li>
+</ul>
+<h3 id="endpoints">Endpoints</h3>
+<h3 id="get-">GET /</h3>
+<ul>
+<li>General:<ul>
+<li>Returns project description</li>
+</ul>
+</li>
+<li>Sample: &#39;curl <a href="http://172.0.0.1:3000">http://172.0.0.1:3000</a>&#39;</li>
+</ul>
+<h4 id="get-images">GET / images</h4>
+<ul>
+<li>General:<ul>
+<li>Returns a error message &amp; 404 in response that you are required to enter filename</li>
+</ul>
+</li>
+<li><p>Sample: &#39;curl <a href="http://172.0.0.1:3000/images">http://172.0.0.1:3000/images</a>&#39;</p>
+</li>
+<li><p>General:</p>
+<ul>
+<li>Returns original image or 400 if the file doesn&#39;t exist</li>
+</ul>
+</li>
+<li><p>Sample: &#39;curl <a href="http://172.0.0.1:3000/images&amp;filename=[validFile">http://172.0.0.1:3000/images&amp;filename=[validFile</a>]&#39;</p>
+</li>
+<li><p>General:</p>
+<ul>
+<li>Returns original image with resized width and original height or 400 if the file doesn&#39;t exist</li>
+</ul>
+</li>
+<li><p>Sample: &#39;curl <a href="http://172.0.0.1:3000/images&amp;filename=[validFile]&amp;width=[validNum">http://172.0.0.1:3000/images&amp;filename=[validFile]&amp;width=[validNum</a>]&#39;</p>
+</li>
+<li><p>General:</p>
+<ul>
+<li>Returns original image with resized height and original width or 400 if the file doesn&#39;t exist</li>
+</ul>
+</li>
+<li><p>Sample: &#39;curl <a href="http://172.0.0.1:3000/images&amp;filename=[validFile]&amp;height=[validNum">http://172.0.0.1:3000/images&amp;filename=[validFile]&amp;height=[validNum</a>]&#39;</p>
+</li>
+<li><p>General:</p>
+<ul>
+<li>Returns original image with resized height and width or 400 if the file doesn&#39;t exist</li>
+</ul>
+</li>
+<li>Sample: &#39;curl <a href="http://172.0.0.1:3000/images&amp;filename=[validFile]&amp;height=[validNum]&amp;width=[validNum">http://172.0.0.1:3000/images&amp;filename=[validFile]&amp;height=[validNum]&amp;width=[validNum</a>]&#39;</li>
+</ul>
+<h3 id="notes">Notes</h3>
+<ul>
+<li>If the user entered the width and height in negative numbers the negative is neglected.</li>
+<li>If the user entered the width and height equals zero, original image value is returned.</li>
+</ul>
+<h2 id="running">Running</h2>
+<p>To run the code, run</p>
+<pre><code>npm <span class="hljs-keyword">run</span><span class="bash"> start</span>
+</code></pre><h2 id="testing">Testing</h2>
+<p>Testing is done using jasmine
+To run the tests, run</p>
+<pre><code>npm <span class="hljs-keyword">run</span><span class="bash"> <span class="hljs-built_in">test</span></span>
+</code></pre><h2 id="author">Author</h2>
+<p><sup>Ahmed Fouad </p>
+<h3 id="acknowledgments">Acknowledgments</h3>
+<ul>
+<li>sharp docs <a href="https://sharp.pixelplumbing.com/api-input#metadata">https://sharp.pixelplumbing.com/api-input#metadata</a></li>
+<li>eslint docs <a href="https://eslint.org/docs/user-guide/command-line-interface">https://eslint.org/docs/user-guide/command-line-interface</a></li>
+</ul>
